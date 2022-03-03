@@ -1,0 +1,13 @@
+vb_hiring_exercise:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: vb-hiring-exercise 
+      dataset: dbt_ekawakami 
+      threads: 8
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      retries: 1
