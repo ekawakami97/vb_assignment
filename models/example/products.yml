@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: products
+    description: |
+      Each row in this model represents a unique product.
+      
+    columns:
+      - name: product_id
+        description: "The UUID of the product."
+        tests:
+          - unique
+          - not_null
+
+      - name: product_category_name
+        description: "Name of the product category."
+
+      - name: product_name_length
+        description: "The number of characters extracted from the product name."
+
+      - name: product_description_length
+        description: "The number of characters extracted from the product description."
+
+      - name: product_photos_qty
+        description: "The number of product published photos."
+
+      - name: product_weight_g
+        description: "The product weight measured in grams."
+
+      - name: product_length_cm
+        description: "The product length measured in centimeters."
+
+      - name: product_height_cm
+        description: "The product height measured in centimeters."
+
+      - name: product_width_cm
+        description: "The product width measured in centimeters."
+
+      - name: total_units_sold
+        description: "The total amount of units sold of the product."
+
+      - name: total_revenue
+        description: "The total revenue (both from item and freight) brought in from that product."

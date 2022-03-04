@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: customers
+    description: |
+      Each row in this model represents a unique customer.
+      
+    columns:
+      - name: customer_unique_id
+        description: "The UUID of the customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: first_order_timestamp
+        description: "Timestamp of when they purchased their first order."
+
+      - name: most_recent_order_timestamp
+        description: "Timestamp of when they purchased their most recent order."
+
+      - name: total_orders
+        description: "The total number of orders made by this customer (excluding canceled and unavailable orders)."
+
+      - name: total_value_orders
+        description: "The total value of the customer's orders - includes item value and freight value (excluding canceled and unavailable orders)."
+
+      - name: customer_city
+        description: "The most up to date city this customer is located."
+
+      - name: customer_state
+        description: "The most up to date state this customer is located."

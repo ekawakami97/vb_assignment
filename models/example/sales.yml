@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: sales
+    description: |
+      Each row in this model represents a unique item in an order. 
+      
+    columns:
+      - name: order_id
+        description: "The UUID of the order."
+
+      - name: customer_id
+        description: "A unique ID given to order that has a corresponding customer_unique_id."
+
+      - name: product_id
+        description: "The UUID of the product."
+
+      - name: seller_id
+        description: "The UUID of the seller."
+
+      - name: price
+        description: "Price of the product."
+
+      - name: freight_value
+        description: "Freight value of the product (if an order has more than one item the freight value is splitted between items)."
+
+      - name: order_item_quantity
+        description: "The total number of that product in the order."
+
+      - name: total_order_item_value
+        description: "The total value of the order items."
+
+      - name: total_items_freight_value
+        description: "The total value of the freight."
+
+      - name: order_status
+        description: "The status of the order."
+
+      - name: order_purchase_timestamp
+        description: "The timestamp in which the order was purchased."
+
+      - name: order_approved_at
+        description: "The timestamp in which the order was approved."
+
+      - name: order_delivered_carrier_date
+        description: "The timestamp in which the order was delivered to the carrier."
+
+      - name: order_delivered_customer_date
+        description: "The timestamp in which the order was delivered to the customer."
+
+      - name: order_estimated_delivery_date
+        description: "The estimated timestamp of the order will be delivered."
